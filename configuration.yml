@@ -1,0 +1,10 @@
+
+http:
+  port: 5000
+  adminPort: 5001
+
+mongohost: 127.0.0.1
+mongoport: 27017
+mongodb: animedb
+articlesCollection: anime_ugc_articles
+topicsCollection: anime_prd_topics
