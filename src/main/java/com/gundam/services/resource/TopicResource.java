@@ -1,9 +1,9 @@
 package com.gundam.services.resource;
 
 
+import com.codahale.metrics.annotation.Timed;
 import com.gundam.services.model.TopicModel;
 import com.mongodb.BasicDBObject;
-import com.yammer.metrics.annotation.Timed;
 import net.vz.mongodb.jackson.DBCursor;
 import net.vz.mongodb.jackson.JacksonDBCollection;
 

@@ -1,11 +1,13 @@
 package com.gundam.services.resource;
 
 
+import com.codahale.metrics.annotation.Timed;
 import com.gundam.services.model.ArticleModel;
 import com.mongodb.BasicDBObject;
-import com.yammer.metrics.annotation.Timed;
 import net.vz.mongodb.jackson.DBCursor;
 import net.vz.mongodb.jackson.JacksonDBCollection;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.validation.Valid;
 import javax.ws.rs.*;
@@ -20,6 +22,8 @@ import java.util.List;
 
 @Path("/articles")
 public class ArticleResource {
+
+    final static Logger log= LoggerFactory.getLogger(ArticleResource.class);
 
     private JacksonDBCollection<ArticleModel, String> collection;
 

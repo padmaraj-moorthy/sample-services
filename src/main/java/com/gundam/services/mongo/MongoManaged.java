@@ -1,7 +1,8 @@
 package com.gundam.services.mongo;
 
 import com.mongodb.Mongo;
-import com.yammer.dropwizard.lifecycle.Managed;
+import io.dropwizard.lifecycle.Managed;
+
 
 /**
  * Created by moorthy on 6/14/2017.

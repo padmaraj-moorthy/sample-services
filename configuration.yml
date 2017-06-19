@@ -1,10 +1,27 @@
-
-http:
-  port: 5000
-  adminPort: 5001
+server:
+  type: simple
+  applicationContextPath: /
+  adminContextPath: /admin
+  connector:
+    type: http
+    port: 5000
 
 mongohost: 127.0.0.1
 mongoport: 27017
 mongodb: animedb
 articlesCollection: anime_ugc_articles
 topicsCollection: anime_prd_topics
+
+logging:
+  level: INFO
+  appenders:
+    - type: console
+      threshold: ALL
+      timeZone: UTC
+      target: stdout
+    - type: file
+      threshold: ALL
+      currentLogFilename: ./log/anime-services.log
+      archivedLogFilenamePattern: ./log/anime-services-%d.log.gz,
+      archivedFileCount: 5
+      timeZone: UTC
